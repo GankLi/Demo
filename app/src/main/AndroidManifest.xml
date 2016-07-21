@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.gank.demo">
+
+    <uses-feature
+        android:name="android.hardware.bluetooth_le"
+        android:required="true" />
+
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.GET_PACKAGE_SIZE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".gaussblurtest.GaussActivity" />
+        <activity android:name=".opengl.egl.OpenGlDemo" />
+        <activity android:name=".opengl.glsurfaceview.OpenGLES20Activity" />
+        <activity android:name=".views.progress.TestActivity" />
+        <activity android:name=".views.progress.ActivityProgress" />
+        <activity android:name=".systemui.MainActivity" />
+        <activity android:name=".bluetooth.printer.BluetoothListActivity" />
+        <activity android:name=".bluetooth.printer.BluetoothPrinterActivity" />
+        <activity android:name=".bluetooth.talk.ServerActivity" />
+        <activity
+            android:name=".info.SystemInfoActivity"
+            android:label="@string/title_activity_system_info" />
+        <activity
+            android:name=".views.pulltorefresh.PullActivity"
+            android:label="@string/title_activity_pull" />
+        <activity
+            android:name=".mvp.ui.activitys.WeatherActivity"
+            android:label="@string/title_activity_weather">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".bluetooth.advertiser.BLEAdvertiserActivity" />
+
+        <service
+            android:name=".bluetooth.printer.service.PrinterService"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.gank.demo.printer" />
+            </intent-filter>
+        </service>
+
+        <activity android:name=".views.event.EventActivity" />
+        <activity
+            android:name=".gaussblurtest.RenderActivity"
+            android:label="@string/title_activity_render"></activity>
+    </application>
+
+</manifest>
