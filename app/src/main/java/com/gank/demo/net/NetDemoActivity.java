@@ -7,7 +7,6 @@ import android.view.View;
 import android.widget.Button;
 
 import com.gank.demo.R;
-import com.gank.demo.net.bean.PrintStatus;
 import com.gank.demo.net.service.IAykjService;
 import com.gank.demo.net.utils.MockData;
 
@@ -18,7 +17,6 @@ import okhttp3.OkHttpClient;
 import okhttp3.logging.HttpLoggingInterceptor;
 import retrofit2.Retrofit;
 import retrofit2.adapter.rxjava.RxJavaCallAdapterFactory;
-import retrofit2.converter.gson.GsonConverterFactory;
 import retrofit2.converter.scalars.ScalarsConverterFactory;
 import rx.Observable;
 import rx.Observer;
@@ -76,7 +74,7 @@ public class NetDemoActivity extends Activity {
                                 Log.w("Gank", "Upload -- Res: " + res);
                             }
                         });
-                Observable<String> observable1 =  service.queryPrintStatus(MockData.OP_QUERY, MockData.UMN, MockData.DNO, MockData.KEY, MockData.MODE_QUERY);
+                Observable<String> observable1 =  service.queryPrintStatus(MockData.OP_QUERY_DEVICE, MockData.UMN, MockData.DNO, MockData.KEY, MockData.MODE_QUERY_DEVICE);
                 observable1.observeOn(AndroidSchedulers.mainThread()).subscribeOn(Schedulers.io())
                         .subscribe(new Observer<String>() {
                             @Override
@@ -91,7 +89,26 @@ public class NetDemoActivity extends Activity {
 
                             @Override
                             public void onNext(String res) {
-                                Log.w("Gank", "Query -- Res: " + res);
+                                Log.w("Gank", "Query Device -- Res: " + res);
+                            }
+                        });
+
+                Observable<String> observable2 =  service.queryOrderStatus(MockData.OP_QUERY_ORDER, MockData.UMN, MockData.MSGNO,  MockData.DNO, MockData.KEY, MockData.MODE_QUERY_ORDER);
+                observable2.observeOn(AndroidSchedulers.mainThread()).subscribeOn(Schedulers.io())
+                        .subscribe(new Observer<String>() {
+                            @Override
+                            public void onCompleted() {
+                                Log.w("Gank", "onCompleted");
+                            }
+
+                            @Override
+                            public void onError(Throwable e) {
+                                Log.w("Gank", "onError", e);
+                            }
+
+                            @Override
+                            public void onNext(String res) {
+                                Log.w("Gank", "Query Order -- Res: " + res);
                             }
                         });
             }

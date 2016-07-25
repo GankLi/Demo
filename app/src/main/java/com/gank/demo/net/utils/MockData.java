@@ -11,12 +11,14 @@ import java.security.NoSuchAlgorithmException;
 public class MockData {
 
     public static final String OP = "pf";
-    public static final String OP_QUERY = "cx";
+    public static final String OP_QUERY_DEVICE = "cx";
+    public static final String OP_QUERY_ORDER = "cxdd";
     public static final String CONTENT = "woshishui";
     public static final String UMN = "ouo777";
     public static final String DNO = "160719911";
     public static final String MODE = "|0";
-    public static final String MODE_QUERY = "cx";
+    public static final String MODE_QUERY_DEVICE = "cx";
+    public static final String MODE_QUERY_ORDER = "cxdd";
     public static final String MSGNO = "990099";
     public static final String API_KEY = "0p6nl88vhpj000th";
     public static final String MD5_KEY = "aykj";

@@ -30,4 +30,12 @@ public interface IAykjService {
                                              @Query("dno") String dno,
                                              @Query("key") String key,
                                              @Query("mode") String mode);
+
+    @GET("WS/DealData.ashx")
+    Observable<String> queryOrderStatus(@Query("op") String op,
+                                        @Query("unm") String unm,
+                                        @Query("msgno") String msgno,
+                                        @Query("dno") String dno,
+                                        @Query("key") String key,
+                                        @Query("mode") String mode);
 }
