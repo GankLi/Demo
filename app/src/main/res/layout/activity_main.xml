@@ -145,4 +145,14 @@
             android:id="@+id/button15"
             android:layout_column="0" />
     </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:text="Net"
+            android:id="@+id/button17"
+            android:layout_column="0" />
+    </TableRow>
 </TableLayout>

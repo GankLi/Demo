@@ -18,6 +18,7 @@ import com.gank.demo.gaussblurtest.GaussActivity;
 import com.gank.demo.gaussblurtest.RenderActivity;
 import com.gank.demo.info.SystemInfoActivity;
 import com.gank.demo.mvp.ui.activitys.WeatherActivity;
+import com.gank.demo.net.NetDemoActivity;
 import com.gank.demo.opengl.egl.OpenGlDemo;
 import com.gank.demo.opengl.glsurfaceview.OpenGLES20Activity;
 import com.gank.demo.bluetooth.printer.BluetoothListActivity;
@@ -139,6 +140,12 @@ public class MainActivity extends Activity {
             @Override
             public void onClick(View v) {
                 startDemo(EventActivity.class);
+            }
+        });
+        findViewById(R.id.button17).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startDemo(NetDemoActivity.class);
             }
         });
         Toast.makeText(getBaseContext(), res1 + " " + res2, Toast.LENGTH_SHORT).show();
