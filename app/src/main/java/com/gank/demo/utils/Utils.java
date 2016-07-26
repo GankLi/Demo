@@ -1,5 +1,7 @@
 package com.gank.demo.utils;
 
+import android.view.View;
+
 import java.nio.ByteBuffer;
 import java.util.UUID;
 

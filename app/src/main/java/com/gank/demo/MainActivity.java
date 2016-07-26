@@ -15,7 +15,6 @@ import com.gank.demo.bluetooth.talk.ServerActivity;
 import com.gank.demo.dialog.CustomDialog;
 import com.gank.demo.dialog.DialogUtils;
 import com.gank.demo.gaussblurtest.GaussActivity;
-import com.gank.demo.gaussblurtest.RenderActivity;
 import com.gank.demo.info.SystemInfoActivity;
 import com.gank.demo.mvp.ui.activitys.WeatherActivity;
 import com.gank.demo.net.NetDemoActivity;
@@ -37,8 +36,6 @@ public class MainActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        int res1 = Log.v("Gank", "-----onCreate------");
-        int res2 = Log.e("Gank", "-----onCreate------");
         setContentView(R.layout.activity_main);
         findViewById(R.id.button).setOnClickListener(new View.OnClickListener() {
             @Override
@@ -115,7 +112,7 @@ public class MainActivity extends Activity {
         findViewById(R.id.button16).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startDemo(RenderActivity.class);
+//                startDemo(RenderActivity.class);
             }
         });
         findViewById(R.id.button11).setOnClickListener(new View.OnClickListener() {
@@ -148,7 +145,6 @@ public class MainActivity extends Activity {
                 startDemo(NetDemoActivity.class);
             }
         });
-        Toast.makeText(getBaseContext(), res1 + " " + res2, Toast.LENGTH_SHORT).show();
     }
 
     private void startDemo(Class clazz) {

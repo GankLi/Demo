@@ -368,7 +368,7 @@ void gaussBlur2(int* pix, int w, int h, int r)
 	free(tempPix);
 }
 
-void Java_com_gank_demo_gaussblurtest_GaussBlur_initCBlur1(JNIEnv* env,
+void Java_com_gank_demo_gaussblurtest_BlurUtil_initCBlur1(JNIEnv* env,
 												jobject obj,
 												jintArray pix,
 												jint w,
@@ -378,7 +378,7 @@ void Java_com_gank_demo_gaussblurtest_GaussBlur_initCBlur1(JNIEnv* env,
 	gaussBlur1(env->GetIntArrayElements(pix, NULL), w, h, r);
 }
 
-void Java_com_gank_demo_gaussblurtest_GaussBlur_initCBlur2(JNIEnv* env,
+void Java_com_gank_demo_gaussblurtest_BlurUtil_initCBlur2(JNIEnv* env,
 												jobject obj,
 												jintArray pix,
 												jint w,

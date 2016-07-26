@@ -1,21 +1,12 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="0dp"
     android:layout_margin="0dp" >
 
-    <ImageView
-        android:id="@+id/imageView1"
-        android:layout_width="wrap_content"
-        android:layout_height="200dp"
-        android:padding="0dp"
-        android:layout_margin="0dp"
-        android:src="@null" />
-    
     <TextView
-        android:id="@+id/textView1"
+        android:id="@+id/title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
@@ -23,15 +14,63 @@
         android:layout_margin="0dp" />
 
     <ImageView
-        android:id="@+id/imageView2"
+        android:id="@+id/image_gauss"
         android:layout_width="wrap_content"
-        android:layout_height="200dp"
+        android:layout_height="90dp"
         android:padding="0dp"
         android:layout_margin="0dp"
         android:src="@null" />
     
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/text_gauss"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:padding="0dp"
+        android:layout_margin="0dp" />
+
+    <ImageView
+        android:id="@+id/image_avg"
+        android:layout_width="wrap_content"
+        android:layout_height="90dp"
+        android:padding="0dp"
+        android:layout_margin="0dp"
+        android:src="@null" />
+    
+    <TextView
+        android:id="@+id/text_avg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:padding="0dp"
+        android:layout_margin="0dp" />
+
+    <ImageView
+        android:id="@+id/image_renderscript"
+        android:layout_width="wrap_content"
+        android:layout_height="90dp"
+        android:padding="0dp"
+        android:layout_margin="0dp"
+        android:src="@null" />
+
+    <TextView
+        android:id="@+id/text_renderscript"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:padding="0dp"
+        android:layout_margin="0dp" />
+
+    <ImageView
+        android:id="@+id/image_java"
+        android:layout_width="wrap_content"
+        android:layout_height="90dp"
+        android:padding="0dp"
+        android:layout_margin="0dp"
+        android:src="@null" />
+
+    <TextView
+        android:id="@+id/text_java"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
@@ -39,7 +78,7 @@
         android:layout_margin="0dp" />
 
     <Button
-        android:id="@+id/button1"
+        android:id="@+id/btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"

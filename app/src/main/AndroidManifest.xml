@@ -61,9 +61,6 @@
         </service>
 
         <activity android:name=".views.event.EventActivity" />
-        <activity
-            android:name=".gaussblurtest.RenderActivity"
-            android:label="@string/title_activity_render" />
         <activity android:name=".net.NetDemoActivity"></activity>
     </application>
 
